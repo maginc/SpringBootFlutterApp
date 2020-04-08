@@ -15,11 +15,12 @@ import java.util.Random;
  **/
 
 @org.springframework.web.bind.annotation.RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/v1")
 public class RestController {
     private static Logger LOG = LoggerFactory.getLogger(RestController.class);
 
-    @CrossOrigin("*")
+    @CrossOrigin(origins = "*")
     @GetMapping("/randomnumber")
     @ResponseBody
     public String randomnnumber(){
